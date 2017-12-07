@@ -1,0 +1,23 @@
+{
+  "name": "questlipsync",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "cd client && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cchara11/cchara11.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cchara11/cchara11.github.io/issues"
+  },
+  "homepage": "https://github.com/cchara11/cchara11.github.io#readme",
+  "description": ""
+}
