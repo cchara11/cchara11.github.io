@@ -147,7 +147,7 @@ hr {
 #mainContainer{
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 #mainContent{
@@ -162,7 +162,7 @@ hr {
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding-top:70px;
     padding-bottom:10px;
 }
@@ -172,7 +172,7 @@ hr {
     background-image: linear-gradient(rgba(1,101,252,0.5),rgba(1,101,252,0.3)), url("../img/misc/briefcase_cap.png");
     background-repeat: repeat;
     background-attachment: fixed;
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -181,7 +181,7 @@ hr {
     width: 150px;
     height: 150px;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
     border-radius: 70%;
     margin-top: 30px;
 }
@@ -201,7 +201,7 @@ img {
 .programming{
     position: relative;
     background: white;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .scenario {
@@ -210,7 +210,7 @@ img {
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -218,7 +218,7 @@ img {
 .contact {
     position: relative;
     background: black;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .scenarioItem {
