@@ -468,4 +468,19 @@ article{
 	background: white;
 }
 
+/* custom button */
+.button {
+    background-color: #0077b5;
+    border: none;
+    color: white;
+    font-size: 30px;
+    display: inline-block;
+    padding: 15px 32px;
+}
+
+.button:hover{
+    color: #0077b5;
+    background-color: white;
+}
+
 

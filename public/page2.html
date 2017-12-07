@@ -1,20 +1,12 @@
 <head>
     <script>
         $(function () {
-            $("#contentFemale").load("contentFemale0.html");
+            $("#contentFemale").load("contentFemale1.html");
         });
         $(function () {
-            $("#contentMale").load("contentMale0.html");
+            $("#contentMale").load("contentMale1.html");
         });
     </script>
-    <script>
-        function nextPart(){
-        $(function(){
-            $("#renderPage").load("page2.html");
-        });
-    }
-    </script>
-    
 </head>
 <div class="col-md-12">
     <h2>
@@ -36,6 +28,6 @@
 </div>
 <div class="row" id="proceed-part2-button">
     <div class="col-md-12 text-center">
-        <button class="button" type="button" onclick="nextPart()">Proceed to Part 2</button>
+        <button class="button" type="button" onclick="endExperiment()">End Experiment</button>
     </div>
 </div>

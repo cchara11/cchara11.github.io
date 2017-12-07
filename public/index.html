@@ -17,21 +17,28 @@
     <script src="https://labnol.googlecode.com/files/youtube.js"></script>
     <script>
         $(function(){
-            $("#page1").load("page1.html");
+            $("#renderPage").load("page0.html");
         });
     </script>
     <script>
-        function saveData()
-        {
-            var data = document.getElementsByName("03_01_03_01_01_01_02_0_VS_1");
+        // function saveData()
+        // {
+        //     var data = document.getElementsByName("03_01_03_01_01_01_02_0_VS_1");
             
-            for (i = 0; i < data.length; i++)
-            {
-                if (data[i].checked)
-                {
-                    alert(data[i].id);
-                }
-            }
+        //     for (i = 0; i < data.length; i++)
+        //     {
+        //         if (data[i].checked)
+        //         {
+        //             alert(data[i].id);
+        //         }
+        //     }
+        // }
+        function firstExperiment()
+        {
+            $(function(){
+                $("#renderPage").load("page1.html");
+                $('#proceed-button').remove();
+            });
         }
     </script>
 </head>
@@ -42,35 +49,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1><strong>Questionnaire</strong></h1>
+                    <h1><strong>Lip-Sync Components Comparison - Questionnaire</strong></h1>
                     <hr>
                 </div>
             </div>
             <div class="row">
-                <div id="page1"></div>>
+                <div id="renderPage"></div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <button type="button" onclick="saveData()">Submit</button>
+            <br>
+            <hr>
+            <div class="row" id="proceed-button">
+                <div class="col-md-12 text-center">
+                    <button class="button" type="button" onclick="firstExperiment()">Start Experiment</button>
                 </div>
             </div>
         </div>
         <hr>
     </div>
-    <div class="col-md-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Saeq5xzMQrQ?mode=opaque&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            <label class="containerRadio">
-                <input type="radio" name="03_01_03_01_01_01_02_0_VS_1" id = "03_01_03_01_01_01_02_1" value ="03_01_03_01_01_01_02_1">
-                <span class="checkmark"></span>
-            </label>                        
-        </div>
-        <div class="col-md-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/c8p0FkUTrBw?mode=opaque&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            <label class="containerRadio">
-                <input type="radio" name="03_01_03_01_01_01_02_0_VS_1" id = "03_01_03_01_01_01_02_0" value ="03_01_03_01_01_01_02_0">
-                <span class="checkmark"></span>
-            </label>                        
-        </div>
     <footer>
         <div class="container">
             <div class="row">
