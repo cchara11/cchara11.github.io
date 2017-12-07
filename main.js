@@ -8,6 +8,7 @@ app.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, function(){
+});
 
 console.log("Running at Port 3000");
