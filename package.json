@@ -2,7 +2,9 @@
   "name": "questlipsync",
   "version": "0.0.1",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "node-router": "^0.1.5"
   },
   "main": "main.js",
   "devDependencies": {},

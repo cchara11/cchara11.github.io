@@ -158,7 +158,7 @@ hr {
 
 .main {
     position: relative;
-    background-image: url("../img/main_background.jpg");
+    background-image: url("../img/gray_background.jpg");
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
@@ -207,7 +207,7 @@ img {
 .scenario {
     position: relative;
     /*background-image: linear-gradient(rgba(1,101,252,0.5),rgba(1,101,252,0.3)), url("../img/portfolio_background.jpg");*/
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(65, 67, 70, 0.5)), url("../img/portfolio_background.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(65, 67, 70, 0.5)), url("../img/gray_background.jpg");
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;

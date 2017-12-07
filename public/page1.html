@@ -7,15 +7,15 @@
             $("#contentMale").load("contentMale0.html");
         });
     </script>
-    <script>
-        function nextPart(){
-        $(function(){
-            $("#renderPage").load("page2.html");
-        });
-    }
-    </script>
+    <script src="js/readUserInput.js"></script>
     
 </head>
+<div class="col-md-12">
+    <h2>
+        <strong>Part 1</strong>
+    </h2>
+    <hr>
+</div>
 <div class="col-md-12">
     <h2>
         <strong>Female Model</strong>
@@ -36,6 +36,6 @@
 </div>
 <div class="row" id="proceed-part2-button">
     <div class="col-md-12 text-center">
-        <button class="button" type="button" onclick="nextPart()">Proceed to Part 2</button>
+        <button class="button" type="button" onclick="connectAndInsert('page2.html')">Proceed to Part 2</button>
     </div>
 </div>
