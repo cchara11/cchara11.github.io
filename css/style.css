@@ -208,7 +208,6 @@ img {
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    overflow: hidden;
     padding-top: 60px;
     padding-bottom: 60px;
 }
