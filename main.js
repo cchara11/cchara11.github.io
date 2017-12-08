@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var MongoClient   = require('mongodb').MongoClient,
   assert  = require('assert');
 
-var url = 'mongodb://const:lipsyncUU@ds133496.mlab.com:33496/lipsync'
+var url = 'mongodb://const:04061991@ds133496.mlab.com:33496/lipsync'
 
 app.use(session({ 
   secret: 'lipsync', 
