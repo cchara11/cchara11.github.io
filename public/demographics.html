@@ -1,0 +1,73 @@
+<script>
+    // function next()
+    //     {
+    //         $(function(){
+    //             $("#renderPage").load("page0.html");
+    //             $('#next').remove();
+    //         });
+    //     }
+</script>
+<script src="js/validateUserDemographics.js"></script>
+<div class="col-md-12">
+    <p>
+        <h2 style="text-align:center"><strong>Demographic Information</strong></h2>
+        <strong>
+            <hr>
+            <p style="text-align: center">Before proceeding please fill in some demographic information, and click the Next button</p>
+            <hr>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <p style="text-align:right">Please provide your age group: </p>      
+                </div>
+                <div class="col-md-6">
+                    <select id="age" class="selectDropDown">
+                        <option value=""></option>
+                        <option value="18-24">18-24</option>
+                        <option value="25-34">25-34</option>
+                        <option value="35-44">35-44</option>
+                        <option value="45-54">45-54</option>
+                        <option value="55-64">55-64</option>
+                        <option value="65 and over">65 and over</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <p style="text-align:right">Please provide your gender: </p>      
+                </div>
+                <div class="col-md-6">
+                    <select id="gender" class="selectDropDown">
+                        <option value=""></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                        <p style="text-align:right">Please provide your level of education: </p>     
+                </div>
+                <div class="col-md-6">
+                    <select id="education" class="selectDropDown">
+                        <option value=""></option>
+                        <option value="Elementary School">Elementary School</option>
+                        <option value="High School">High School</option>
+                        <option value="Undergraduate Degree">Undergraduate Degree</option>
+                        <option value="Master's Degree">Master's Degree</option>
+                        <option value="Doctorate Degree">Doctorate Degree</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+        </strong>
+    </p>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+<div class="row" id="next">
+    <div class="col-md-12 text-center">
+        <button class="button" type="button" onclick="validate('page0.html')">Next</button>
+    </div>
+</div>

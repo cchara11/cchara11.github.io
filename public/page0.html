@@ -1,29 +1,40 @@
+<script>
+    function firstExperiment()
+        {
+            $(function(){
+                $("#renderPage").load("page1.html");
+                $('#firstExperiment').remove();
+            });
+        }
+</script>
 <div class="col-md-12">
     <p>
         <strong>
             The purpose of the currrent questionnaire is to evaluate a custom lip-sync animation component that was implemented as part
-            of a Thesis Master project. 
-            The component will be compared against two commercial lip-sync animation programms:<p style="font-size:30px">RogoDigital, Face-FX</p>
+            of a Master's Thesis project. 
+            The component will be compared against two commercial lip-sync animation programms
             <br>
             <p>
-            The questionnaire is divided into two parts, each one consisted of 36 videos. There are 9 scenarios for female models (18 videos) and 9 scenarios for male models (18 videos).
-            In each scenario you will have to choose your preffered animation. 
+            The questionnaire is divided into two parts, each one consists of 36 videos. There are 9 scenarios for female models (18 videos) and 9 scenarios for male models (18 videos).
+            In each scenario you will choose your preffered animation. 
             </p>
             <br>
             <p>Your preference should be based on the following three parameters:</p>
             <ul>
-                <li><p>The animation looks realistic</p></li>
+                <li><p>The animation looks natural</p></li>
                 <li><p>The animation is synchronized with the audio</p></li>
-                <li><p>The animation is identified by the audio</p></li>
             </ul> 
             <br>
             <p style="font-size:30px">IMPORTANT NOTE:</p> <p>There are some videos that have different rendering. Since the purpose of the questionnaire is to evaluate 
             the mouth during animation, please ignore the model's appearance and focus only on the mouth part.</p>
-            <p>Notes:</p>
-            <ul>
-                <li><p>The audio for scenarios 9.1 &amp; 9.2, was obtained by the public domain audiobooks <a href="https://librivox.org/" style="color:white">LibriVox</a></p></li>
-                <li><p>The audio for the first six scenarios, was obtained by the emotional database <a href="http://smartlaboratory.org/ravdess/" style="color:white">Ravdess</a></p></li>
-            </ul>
         </strong>
     </p>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+<div class="row" id="firstExperiment">
+    <div class="col-md-12 text-center">
+        <button class="button" type="button" onclick="firstExperiment()">Begin Experiment</button>
+    </div>
 </div>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lip-Sync Comparison</title>
+    <title>Audio-driven Speech Animation for Virtual Characters</title>
     <meta name="decription" content="">
     <meta name="author" content="Constantinos Charalambous">
     <meta name="viewport" content="width=device-width">
@@ -16,15 +16,15 @@
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script>
         $(function(){
-            $("#renderPage").load("page0.html");
+            $("#renderPage").load("consent.html");
         });
     </script>
     <script>
-        function firstExperiment()
+        function agree()
         {
             $(function(){
-                $("#renderPage").load("page1.html");
-                $('#proceed-button').remove();
+                $("#renderPage").load("demographics.html");
+                $('#agree-button').remove();
             });
         }
     </script>
@@ -36,7 +36,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1><strong>Lip-Sync Components Comparison - Questionnaire</strong></h1>
+                    <h1><strong>Audio-driven Speech Animation for Virtual Characters</strong></h1>
                     <hr>
                 </div>
             </div>
@@ -45,9 +45,9 @@
             </div>
             <br>
             <hr>
-            <div class="row" id="proceed-button">
+            <div class="row" id="agree-button">
                 <div class="col-md-12 text-center">
-                    <button class="button" type="button" onclick="firstExperiment()">Start Experiment</button>
+                    <button class="button" type="button" onclick="agree()">Agree</button>
                 </div>
             </div>
         </div>

@@ -1,16 +1,16 @@
-function connectAndInsert(nextPage){
+function validate(nextPage){
     $(function($http){
         var radioButtons = document.getElementsByTagName("input");
-        for (i = 0; i < radioButtons.length; i+=2)
-        {
-            if (radioButtons[i].checked || radioButtons[i+1].checked)
-            {
-                continue;
-            }
-            // change this to alert
-            alert("Please fill an answer for scenario " + radioButtons[i].value);
-            return;
-        }
+        // for (i = 0; i < radioButtons.length; i+=2)
+        // {
+        //     if (radioButtons[i].checked || radioButtons[i+1].checked)
+        //     {
+        //         continue;
+        //     }
+        //     // change this to alert
+        //     alert("Please fill an answer for scenario " + radioButtons[i].value);
+        //     return;
+        // }
         
         var data = {
             answers:[]
@@ -19,11 +19,12 @@ function connectAndInsert(nextPage){
         {
             data.answers.push({
                 "videoName" : radioButtons[i].id, 
-                "answer" : radioButtons[i].checked
+                "answer" : radioButtons[i].checked,
+                "scenario" : radioButtons[i].value
             });
         }
 
-        $http.get('/connectAndInsert', data)
+        $http.get('/connectAndInsertAnswers', data)
             .success(
                 function(success)
                 {

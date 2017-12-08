@@ -2,7 +2,9 @@
   "name": "questlipsync",
   "version": "0.0.1",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "mongodb": "^2.2.33",
     "node-router": "^0.1.5"
   },

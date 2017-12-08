@@ -1,34 +1,17 @@
 <head>
     <script>
         $(function () {
-            $("#contentFemale").load("contentFemale0.html");
-        });
-        $(function () {
-            $("#contentMale").load("contentMale0.html");
+            $("#content0").load("content0.html");
         });
     </script>
     <script src="js/readUserInput.js"></script>
-    
 </head>
 <div class="col-md-12">
     <h2>
         <strong>Part 1</strong>
     </h2>
-    <hr>
 </div>
-<div class="col-md-12">
-    <h2>
-        <strong>Female Model</strong>
-    </h2>
-</div>
-<div id="contentFemale"></div>
-<div class="col-md-12">
-    <hr>
-    <h2>
-        <strong>Male Model</strong>
-    </h2>
-</div>
-<div id="contentMale"></div>
+<div id="content0"></div>
 <br>
 <hr>
 <div class="col-md-12">
@@ -36,6 +19,6 @@
 </div>
 <div class="row" id="proceed-part2-button">
     <div class="col-md-12 text-center">
-        <button class="button" type="button" onclick="connectAndInsert('page2.html')">Proceed to Part 2</button>
+        <button class="button" type="button" onclick="validate('page2.html')">Proceed to Part 2</button>
     </div>
 </div>
