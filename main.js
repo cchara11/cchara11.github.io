@@ -22,12 +22,9 @@ app.get('/connectAndInsertAnswers', function(req, res, next)
 {
   var answers = req.query.answers;
   var sessionID = req.sessionID;
-  var documentName = 'temp';
+  var documentName = 'userAnswers';
 
-  for (var i in answers)
-  {
-    answers[i].sessionS = "test";
-  }
+  answers.push({"session":sessionID});
 
   MongoClient.connect(url, function(err, db){
     assert.equal(null, err);
@@ -58,7 +55,7 @@ app.get('/connectAndInsertDemographics', function(req, res, next)
 })
 
 var insertAnswers = function(db, answers, callback) {
-  var collection = db.collection('temp');
+  var collection = db.collection('userAnswers');
 
   collection.insert(answers, function(err, result) 
   {
