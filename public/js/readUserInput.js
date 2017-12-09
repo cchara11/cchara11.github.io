@@ -32,7 +32,6 @@ function validate(nextPage){
                 "videoName" : radioData[i].id, 
                 "answer" : radioData[i].checked,
                 "sess" : "none",
-                "scenario" : radioData[i].value,
             });
         } 
 
