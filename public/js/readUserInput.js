@@ -7,7 +7,6 @@ function validate(nextPage){
         //     {
         //         continue;
         //     }
-        //     // change this to alert
         //     alert("Please fill an answer for scenario " + radioButtons[i].value);
         //     return;
         // }
@@ -25,7 +24,7 @@ function validate(nextPage){
             });
         }
 
-        $http.get('/connectAndInsertAnswers', data)
+        $http.post('/connectAndInsertAnswers', data)
             .success(
                 function(success)
                 {
