@@ -1,15 +1,15 @@
 function validate(nextPage){
     $(function($http){
         var radioData = document.getElementsByTagName("input");
-        for (i = 0; i < radioButtons.length; i+=2)
-        {
-            if (radioButtons[i].checked || radioButtons[i+1].checked)
-            {
-                continue;
-            }
-            alert("Please fill an answer for scenario " + radioButtons[i].value);
-            return;
-        }
+        // for (i = 0; i < radioData.length; i+=2)
+        // {
+        //     if (radioData[i].checked || radioData[i+1].checked)
+        //     {
+        //         continue;
+        //     }
+        //     alert("Please fill an answer for scenario " + radioData[i].value);
+        //     return;
+        // }
 
         var data = {
             answers:[]
