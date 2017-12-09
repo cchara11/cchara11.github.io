@@ -12,21 +12,31 @@ function validate(nextPage){
         // }
 
         var tempText = '';
-        
-        var data = {
-            answers:[]
+
+        var data2 = {
+            answers2:[]
         };
         for (i = 0; i < radioButtons.length; i++)
         {
-            data.answers.push({
-                "videoName" : radioButtons[i].id, 
-                "answer" : radioButtons[i].checked,
-                "scenario" : radioButtons[i].value,
-                "session" : tempText
+            data2.answers2.push({
+                "giannis" : "kostis"
             });
-        }
+        } 
+        
+        // var data = {
+        //     answers:[]
+        // };
+        // for (i = 0; i < radioButtons.length; i++)
+        // {
+        //     data.answers.push({
+        //         "videoName" : radioButtons[i].id, 
+        //         "answer" : radioButtons[i].checked,
+        //         "scenario" : radioButtons[i].value,
+        //         "session" : tempText
+        //     });
+        // }
 
-        $http.get('/connectAndInsertAnswers', data)
+        $http.get('/connectAndInsertAnswers', data2)
             .success(
                 function(success)
                 {
