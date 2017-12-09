@@ -34,7 +34,7 @@ function validate(nextPage){
             });
         } 
 
-        $http.get('/connectAndInsertAnswers', data)
+        $http.get('/connectAndInsertAnswers', data2)
             .success(
                 function(success)
                 {
@@ -45,20 +45,6 @@ function validate(nextPage){
                 {
                     console.log(error)
                 });
-
-        $("#renderPage").load(nextPage);
-
-        $http.get('/connectAndInsertAnswers2', data2)
-        .success(
-            function(success)
-            {
-                console.log(success)
-            })
-        .error(
-            function(error)
-            {
-                console.log(error)
-            });
 
         $("#renderPage").load(nextPage);
     });

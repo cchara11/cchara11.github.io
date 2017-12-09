@@ -20,22 +20,6 @@ app.use(session({
 
 app.get('/connectAndInsertAnswers', function(req, res, next)
 {
-  var answers = req.query.answers;
-  var sessionID = req.sessionID;
-  var documentName = 'userAnswers';
-
-  MongoClient.connect(url, function(err, db){
-    assert.equal(null, err);
-    console.log("Connected successfully to server");
-
-    insertAnswers(db, answers, function(){
-      db.close();
-    });
-  });
-})
-
-app.get('/connectAndInsertAnswers2', function(req, res, next)
-{
   var answers = req.query.answers2;
   var sessionID = req.sessionID;
   var documentName = 'userAnswers';
