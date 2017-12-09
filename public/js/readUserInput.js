@@ -24,7 +24,7 @@ function validate(nextPage){
             });
         }
 
-        $http.post('/connectAndInsertAnswers', data)
+        $http.get('/connectAndInsertAnswers', data)
             .success(
                 function(success)
                 {

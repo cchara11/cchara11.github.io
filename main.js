@@ -15,7 +15,7 @@ app.use(session({
 
 app.use(cookieParser('lipsync'));
 
-app.post('/connectAndInsertAnswers', function(req, res, next)
+app.get('/connectAndInsertAnswers', function(req, res, next)
 {
   var answers = req.query.answers;
   var sessionID = req.sessionID;
