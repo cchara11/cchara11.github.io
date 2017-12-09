@@ -30,7 +30,9 @@ function validate(nextPage){
         {
             data2.answers2.push({
                 "videoName" : radioData[i].id, 
-                "answer" : "triastera"
+                "answer" : radioData[i].checked,
+                "scenario" : radioData[i].value,
+                "session" : "none"
             });
         } 
 
