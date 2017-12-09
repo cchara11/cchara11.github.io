@@ -22,7 +22,7 @@ app.get('/connectAndInsertAnswers', function(req, res, next)
 {
   var answers = req.query.answers;
   var sessionID = req.sessionID;
-  var documentName = 'userAnswers';
+  var documentName = 'temp';
 
   //answers[0].sessionS = sessionID;
   answers[0].sessionS = "thkiaole";
