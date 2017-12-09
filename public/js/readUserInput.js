@@ -19,8 +19,8 @@ function validate(nextPage){
             data.answers.push({
                 "videoName" : radioButtons[i].id, 
                 "answer" : radioButtons[i].checked,
-                "scenario" : radioButtons[i].value
-                //"session" : "null"
+                "scenario" : radioButtons[i].value,
+                "session" : "null"
             });
         }
 

@@ -3,6 +3,7 @@ var app     = express();
 var path    = require("path");
 var session = require("express-session");
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var MongoClient   = require('mongodb').MongoClient,
   assert  = require('assert');
 
@@ -14,6 +15,8 @@ app.use(session({
 }));
 
 app.use(cookieParser('lipsync'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : true}));
 
 app.get('/connectAndInsertAnswers', function(req, res, next)
 {
@@ -21,7 +24,7 @@ app.get('/connectAndInsertAnswers', function(req, res, next)
   var sessionID = req.sessionID;
   var documentName = 'userAnswers';
 
-  //answers[0].session = sessionID;
+  answers[0].session = sessionID;
 
   MongoClient.connect(url, function(err, db){
     assert.equal(null, err);
