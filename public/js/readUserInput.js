@@ -26,9 +26,7 @@ function validate(nextPage){
             });
         }
 
-        var jsonData = JSON.stringify(data);
-
-        $http.get('/connectAndInsertAnswers', jsonData)
+        $http.get('/connectAndInsertAnswers', data)
             .success(
                 function(success)
                 {

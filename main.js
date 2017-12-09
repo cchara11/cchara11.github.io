@@ -9,14 +9,14 @@ var MongoClient   = require('mongodb').MongoClient,
 
 var url = 'mongodb://const:04061991@ds133496.mlab.com:33496/lipsync'
 
+app.use(cookieParser('lipsync'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : true}));
+
 app.use(session({ 
   secret: 'lipsync', 
   cookie: { secure: false , httpOnly:false},
 }));
-
-app.use(cookieParser('lipsync'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended : true}));
 
 app.get('/connectAndInsertAnswers', function(req, res, next)
 {
