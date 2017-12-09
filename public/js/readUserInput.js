@@ -31,8 +31,8 @@ function validate(nextPage){
             data2.answers2.push({
                 "videoName" : radioData[i].id, 
                 "answer" : radioData[i].checked,
+                "sess" : "none",
                 "scenario" : radioData[i].value,
-                "session" : "none"
             });
         } 
 
