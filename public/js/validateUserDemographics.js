@@ -37,7 +37,7 @@ function validate(nextPage){
             "gender" : gender.value,
             "education" : education.value,
             "nationality": nationality.value,
-            "session" : ""
+            "session" : "null"
         });
 
         $http.get('/connectAndInsertDemographics', data)

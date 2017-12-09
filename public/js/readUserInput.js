@@ -20,7 +20,7 @@ function validate(nextPage){
                 "videoName" : radioButtons[i].id, 
                 "answer" : radioButtons[i].checked,
                 "scenario" : radioButtons[i].value,
-                "session" : ""
+                "session" : "null"
             });
         }
 
