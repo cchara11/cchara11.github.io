@@ -24,6 +24,8 @@ app.get('/connectAndInsertAnswers', function(req, res, next)
   var sessionID = req.sessionID;
   var documentName = 'userAnswers';
 
+  answers[0].sess = sessionID;  
+
   MongoClient.connect(url, function(err, db){
     assert.equal(null, err);
     console.log("Connected successfully to server");
