@@ -11,7 +11,7 @@ function validate(nextPage){
         //     return;
         // }
 
-        var tempText = ""
+        var tempText = '';
         
         var data = {
             answers:[]
@@ -26,7 +26,9 @@ function validate(nextPage){
             });
         }
 
-        $http.get('/connectAndInsertAnswers', data)
+        var jsonData = JSON.stringify(data);
+
+        $http.get('/connectAndInsertAnswers', jsonData)
             .success(
                 function(success)
                 {
