@@ -29,8 +29,8 @@ function validate(nextPage){
         for (i = 0; i < radioData.length; i++)
         {
             data2.answers2.push({
-                "giannis" : "kostis", 
-                "peponia" : "triastera"
+                "videoName" : radioData[i].id, 
+                "answer" : "triastera"
             });
         } 
 
