@@ -10,6 +10,8 @@ function validate(nextPage){
         //     alert("Please fill an answer for scenario " + radioButtons[i].value);
         //     return;
         // }
+
+        var tempText = ""
         
         var data = {
             answers:[]
@@ -19,7 +21,8 @@ function validate(nextPage){
             data.answers.push({
                 "videoName" : radioButtons[i].id, 
                 "answer" : radioButtons[i].checked,
-                "scenario" : radioButtons[i].value
+                "scenario" : radioButtons[i].value,
+                "session" : tempText
             });
         }
 
