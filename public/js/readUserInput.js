@@ -23,6 +23,17 @@ function validate(nextPage){
             });
         } 
 
+        var data2 = {
+            answers2:[]
+        };
+        for (i = 0; i < radioData.length; i++)
+        {
+            data2.answers2.push({
+                "giannis" : "kostis", 
+                "peponia" : "triastera"
+            });
+        } 
+
         $http.get('/connectAndInsertAnswers', data)
             .success(
                 function(success)
@@ -34,6 +45,20 @@ function validate(nextPage){
                 {
                     console.log(error)
                 });
+
+        $("#renderPage").load(nextPage);
+
+        $http.get('/connectAndInsertAnswers2', data2)
+        .success(
+            function(success)
+            {
+                console.log(success)
+            })
+        .error(
+            function(error)
+            {
+                console.log(error)
+            });
 
         $("#renderPage").load(nextPage);
     });
