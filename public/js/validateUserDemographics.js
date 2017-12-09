@@ -3,6 +3,7 @@ function validate(nextPage){
         var ageGroup = document.getElementById("age");
         var gender = document.getElementById("gender");
         var education = document.getElementById("education");
+        var nationality = document.getElementById("nationality");
 
         if (ageGroup.value === "")
         {
@@ -22,13 +23,20 @@ function validate(nextPage){
             return;
         }
 
+        if (nationality.value === "")
+        {
+            alert("Please provide your nationality");
+            return;
+        }
+
         var data = {
             demographics:[]
         };
         data.demographics.push({
             "ageGroup" : ageGroup.value, 
             "gender" : gender.value,
-            "education" : education.value
+            "education" : education.value,
+            "nationality": nationality.value
         });
 
         $http.get('/connectAndInsertDemographics', data)
