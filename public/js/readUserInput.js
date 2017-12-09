@@ -1,6 +1,6 @@
 function validate(nextPage){
     $(function($http){
-        var radioButtons = document.getElementsByTagName("input");
+        var radioData = document.getElementsByTagName("input");
         // for (i = 0; i < radioButtons.length; i+=2)
         // {
         //     if (radioButtons[i].checked || radioButtons[i+1].checked)
@@ -11,20 +11,20 @@ function validate(nextPage){
         //     return;
         // }
 
-        var radioData = {
-            answerRadio:[]
+        var data = {
+            answers:[]
         };
-        for (i = 0; i < radioButtons.length; i++)
+        for (i = 0; i < radioData.length; i++)
         {
-            radioData.answerRadio.push({
-                "videoName" : radioButtons[i].id, 
-                "answer" : radioButtons[i].checked,
-                "scenario" : radioButtons[i].value,
+            data.answers.push({
+                "videoName" : radioData[i].id, 
+                "answer" : radioData[i].checked,
+                "scenario" : radioData[i].value,
                 "session" : ""
             });
         } 
 
-        $http.get('/connectAndInsertAnswers', radioData)
+        $http.get('/connectAndInsertAnswers', data)
             .success(
                 function(success)
                 {

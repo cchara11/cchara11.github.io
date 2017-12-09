@@ -20,7 +20,7 @@ app.use(session({
 
 app.get('/connectAndInsertAnswers', function(req, res, next)
 {
-  var answers = req.query.answerRadio;
+  var answers = req.query.answers;
   var sessionID = req.sessionID;
   var documentName = 'userAnswers';
 
