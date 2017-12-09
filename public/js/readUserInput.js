@@ -11,32 +11,20 @@ function validate(nextPage){
         //     return;
         // }
 
-        var tempText = '';
-
-        var data2 = {
-            answers2:[]
+        var radioData = {
+            answerRadio:[]
         };
         for (i = 0; i < radioButtons.length; i++)
         {
-            data2.answers2.push({
-                "giannis" : "kostis"
+            radioData.answerRadio.push({
+                "videoName" : radioButtons[i].id, 
+                "answer" : radioButtons[i].checked,
+                "scenario" : radioButtons[i].value,
+                "session" : ""
             });
         } 
-        
-        // var data = {
-        //     answers:[]
-        // };
-        // for (i = 0; i < radioButtons.length; i++)
-        // {
-        //     data.answers.push({
-        //         "videoName" : radioButtons[i].id, 
-        //         "answer" : radioButtons[i].checked,
-        //         "scenario" : radioButtons[i].value,
-        //         "session" : tempText
-        //     });
-        // }
 
-        $http.get('/connectAndInsertAnswers', data2)
+        $http.get('/connectAndInsertAnswers', radioData)
             .success(
                 function(success)
                 {
