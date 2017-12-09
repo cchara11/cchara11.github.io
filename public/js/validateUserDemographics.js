@@ -36,7 +36,8 @@ function validate(nextPage){
             "ageGroup" : ageGroup.value, 
             "gender" : gender.value,
             "education" : education.value,
-            "nationality": nationality.value
+            "nationality": nationality.value,
+            "session" : ""
         });
 
         $http.get('/connectAndInsertDemographics', data)

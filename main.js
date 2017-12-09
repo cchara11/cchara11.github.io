@@ -21,14 +21,7 @@ app.get('/connectAndInsertAnswers', function(req, res, next)
   var sessionID = req.sessionID;
   var documentName = 'userAnswers';
 
-  MongoClient.connect(url, function(err, db){
-    assert.equal(null, err);
-    console.log("Connected successfully to server");
-
-    insertSession(db, sessionID, documentName, function(){
-      db.close();
-    });
-  });
+  answers[0].session = sessionID;
 
   MongoClient.connect(url, function(err, db){
     assert.equal(null, err);
@@ -46,14 +39,7 @@ app.get('/connectAndInsertDemographics', function(req, res, next)
   var sessionID = req.sessionID;
   var documentName = 'userDemographics';
 
-  MongoClient.connect(url, function(err, db){
-    assert.equal(null, err);
-    console.log("Connected successfully to server");
-
-    insertSession(db, sessionID, documentName, function(){
-      db.close();
-    });
-  });
+  demographics[0].session = sessionID;
 
   MongoClient.connect(url, function(err, db){
     assert.equal(null, err);
@@ -64,33 +50,6 @@ app.get('/connectAndInsertDemographics', function(req, res, next)
     });
   });
 })
-
-var insertSession = function(db, sessionID, documentName, callback) {
-  var collection = db.collection(documentName);
-
-  var session = {
-    sessionInfo:[]
-  };
-  session.sessionInfo.push({
-      "sessionID" : sessionID
-  });
-
-  console.log(sessionID);
-
-  collection.insert(session, function(err, result) 
-  {
-    assert.equal(err, null);
-    if (err)
-    {
-      console.log("Insertion error");
-    }
-    else
-    {
-      console.log("Success");
-    }
-    callback(result);
-  });
-}
 
 var insertAnswers = function(db, answers, callback) {
   var collection = db.collection('userAnswers');
