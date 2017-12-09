@@ -25,7 +25,7 @@ app.get('/connectAndInsertAnswers', function(req, res, next)
   var documentName = 'temp';
 
   //answers[0].sessionS = sessionID;
-  answers[0].sessionS = "thkiaole";
+  answers[0]["sessionS"] = "thkiaole";
   //console.log(answers[0].sessionS);
 
   MongoClient.connect(url, function(err, db){
