@@ -1,7 +1,7 @@
 function validate(nextPage){
     $(function($http){
         var ageGroup = document.getElementById("age");
-        var gender = document.getElementById("gender");
+        var gender = document.getElementById("sex");
         var education = document.getElementById("education");
         var nationality = document.getElementById("nationality");
 
